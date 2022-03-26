@@ -9,4 +9,8 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = yield
+    %nav.navbar.navbar-exapand-lg.navbar-dark.bg-dark
+      .container-fluid.w-75
+        = link_to "UpaBlog", root_path, class: "navbar-brand"
+    .container.w-75
+      = yield
