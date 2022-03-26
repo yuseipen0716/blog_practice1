@@ -9,8 +9,26 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %nav.navbar.navbar-exapand-lg.navbar-dark.bg-dark
+    %nav.navbar.navbar-exapand-lg.navbar-dark.bg-dark.mb-4
       .container-fluid.w-75
         = link_to "UpaBlog", root_path, class: "navbar-brand"
-    .container.w-75
-      = yield
+    .container.w-75.mx-auto.d-flex
+      .container.w-75
+        -# メイン領域
+        = yield
+      .container.w-25
+        -# サイドバー 検索機能はまずは実装せず。
+        .categories.m-3
+          -# カテゴリー欄
+          .card
+            .card-header Categories
+            %ul.list-group.list-group-flush
+              %li.list-group-item 
+                -# 一旦パスをroot_pathにして形だけ実装しているので、機能実装後はリンクを戻しておいて。
+                = link_to "Ruby", root_path
+              %li.list-group-item 
+                -# 一旦パスをroot_pathにして形だけ実装しているので、機能実装後はリンクを戻しておいて。
+                = link_to "PHP", root_path
+              %li.list-group-item 
+                -# 一旦パスをroot_pathにして形だけ実装しているので、機能実装後はリンクを戻しておいて。
+                = link_to "SQL", root_path
