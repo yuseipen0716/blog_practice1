@@ -28,6 +28,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'hamlit-rails', '~> 0.2.3'
 
+gem 'actionmailer'
+
 gem 'devise'
 
 group :development, :test do
